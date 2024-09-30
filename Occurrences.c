@@ -19,13 +19,19 @@ int occurrence(int array[],int lenght,int to_find){
              */
         }
     }
+    
+    printf("# of %ds found: %d\n",to_find,count);
 
     return count;
 }
 
 int  main(){
 
-    int myArray[] = {6,4,6,6,7};
+    int myArray[] = {6,4,6,6,7},
+    a2[] = {2,3,2,4,5},
+    a3[] = {23,23,23,23,0};
+    
+
     // int count = 0;
     // int to_Find = 6;
 
@@ -37,7 +43,9 @@ int  main(){
     //     }
     // }
 
-    printf("# %d\n",occurrence(myArray,5,6));
+    occurrence(myArray,5,6);
+    occurrence(a2,5,2);
+    occurrence(a3,5,23);
 
     return 0;
 }
