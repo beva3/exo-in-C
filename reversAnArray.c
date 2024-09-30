@@ -6,15 +6,14 @@ void print_tab(int tab[],int length);
 void revers_tab(int tab[], int length);
 
 int main(){
-    int myArray[] = {1,2,3,4,5,6,7,8,9};
-    int length = 9;
+    int myArray[] = {1,2,3,4,5,6,7,8,9}; //9
+    int a1[] = {3,4,1,2,3,4}; //6
+    int a2[] = {9,4,5,2,7,8,9,5}; //8
+    // int length = 9;
     
-    print_tab(myArray,length);
-    printf("And after ....\n");
-
-    revers_tab(myArray,length);
-    
-    print_tab(myArray,length);
+    print_tab(myArray,9),revers_tab(myArray,9),print_tab(myArray,9);
+    print_tab(a1,6),revers_tab(a1,6),print_tab(a1,6);
+    print_tab(a2,8),revers_tab(a2,8),print_tab(a2,8);
 
     return 0;
 }
