@@ -13,6 +13,8 @@ int main(){
     int t_0 = 0,t_1 = 1, next_term = 0;
     int lim = 20;
 
+// iterative solutoin
+
     for (int i = 2; i < lim; i++)
     {
         next_term = t_0 + t_1;
@@ -32,6 +34,7 @@ int main(){
     return 0;
 }
 
+// recursive solution
 int fib(int n){
     if(n>1) return fib(n-1) + fib(n-2);
     else if(n == 1) return 1;
