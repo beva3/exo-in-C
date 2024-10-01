@@ -30,6 +30,7 @@ int main(){
         printf("%d%c ",fib(i),(i == lim -1)? '\n':',');
     }
     
+    printf("fib(7) = %d\n",fib(7));
     
     return 0;
 }
