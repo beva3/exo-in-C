@@ -1,5 +1,6 @@
 /**
- * Create a copy of an array 
+ * Create a copy of an array
+ * https://www.youtube.com/watch?v=aCR3SlfZTwg&list=PLA1FTfKBAEX6dPcQitk_7uL3OwDdjMn90&index=14
  */
 
 #include <stdio.h>
