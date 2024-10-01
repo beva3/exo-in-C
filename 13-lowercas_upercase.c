@@ -7,13 +7,7 @@
 #include <ctype.h>
 
 void letter_flip(char *s){
-    
-}
-
-int main(){
-
-    char s[] = "abcdABCD";
-    int length = strlen(s);
+     int length = strlen(s);
 
     for (int i = 0; i < length; i++)
     {
@@ -23,7 +17,23 @@ int main(){
             s[i] = toupper(s[i]);
         }
     }
-    
+}
+
+int main(){
+
+    char s[] = "abcdABCD";
+
+    // int length = strlen(s);
+
+    // for (int i = 0; i < length; i++)
+    // {
+    //     if (isupper(s[i])){
+    //         s[i] = tolower(s[i]);
+    //     }else if(islower(s[i])){
+    //         s[i] = toupper(s[i]);
+    //     }
+    // }
+    letter_flip(s);
     printf("%s\n",s);
 
     return 0;
