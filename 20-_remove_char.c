@@ -46,3 +46,6 @@ void remove_char(char *s, char c){
     }
     
 }
+/**
+ * mi-amihena ny strlen() satria : a <- '\0' lasa mivadika anio
+ */
