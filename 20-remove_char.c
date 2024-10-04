@@ -9,12 +9,15 @@ void print_array(char *array);
 
 int main(){
     char me[] = "RaphaelR";
+
+    print_array(me);
     remove_char(me,'R');
+    print_array(me);
     return 0;
 }
 
 void remove_char(char *string, char r){
-    print_array(string);
+    // print_array(string);
     int pos = 0;
     while (string[pos] !='\0')
     {
@@ -30,7 +33,7 @@ void remove_char(char *string, char r){
         pos++;
     }
 
-    print_array(string);
+    // print_array(string);
 
 }
 
