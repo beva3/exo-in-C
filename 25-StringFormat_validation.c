@@ -17,12 +17,16 @@ int main()
 
 bool is_postal_code(char postal_code[]){
     if(strlen(postal_code) != 7) return false;
-    if(!isalpha(postal_code[0])) return false;
-    if(!isdigit(postal_code[1])) return false;
-    if(!isalpha(postal_code[2])) return false;
+    if( !isalpha(postal_code[0]) && 
+        !isalpha(postal_code[2]) &&
+        !isalpha(postal_code[5]))
+        return false;
+    
+    if( !isdigit(postal_code[1]) &&
+        !isdigit(postal_code[4]) &&
+        !isdigit(postal_code[6])) 
+        return false;
     if(!isspace(postal_code[3]))  return false;
-    if(!isdigit(postal_code[4])) return false;
-    if(!isalpha(postal_code[5])) return false;
-    if(!isdigit(postal_code[6])) return false;
+
     return true;
 }
