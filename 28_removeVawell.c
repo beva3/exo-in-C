@@ -6,7 +6,8 @@
 #include <string.h>
 
 int main(){
-    char s[] = "This is the way";
+    char s[23] = "This is the way";
+    printf("The reult is : %s and l = %ld\n",s,strlen(s));
     int cur_pos = 0;
     int new_pos = 0;
     while (cur_pos < strlen(s))
@@ -24,7 +25,7 @@ int main(){
     }
     s[new_pos] = '\0';
     
-    printf("The reult is : %s\n",s);
+    printf("The reult is : %s and l = %ld\n",s,strlen(s));
     
     return 0;
 }
