@@ -3,7 +3,7 @@
 
 /*
  *	ctype.h
- *		tolower()
+ *		tolower() vowell : a,e,i,o,u
  *		toupper()
  *
  * */
