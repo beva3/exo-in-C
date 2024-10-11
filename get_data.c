@@ -26,13 +26,13 @@ int main(){
     return 0;
 }
 
-void print_data(int n1, int n2){
+void print_data(int n1, int n2){    // arg : name's variable
     printf("Print data ... :\n");
     printf("n1 = %d\n",n1);
     printf("n2 = %d\n",n2);
 }
 
-void get_data(int *n1,int *n2){
+void get_data(int *n1,int *n2){     // arg : variable's address
     int a = 20,
         b = 39;
 
@@ -41,3 +41,17 @@ void get_data(int *n1,int *n2){
     *n1 = a;
     *n2 = b;
 }
+
+
+/**
+ * void get_data(int *n1,int *n2);
+ *      arg ADRESS :
+ *          Omeo rano itsy olona itsy : < manondro exact DIRECT
+ * 
+ * void print_data(int n1, int n2);
+ *      arg : NAME :
+ *          omeo rano ny olona, ...???? marina ve ??,
+ *          INDIRECT, COPIE
+ *          FAIRE LA COPIE PUIS D'AFFICHER DATA
+ *          
+ */
