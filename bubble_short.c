@@ -8,6 +8,8 @@ void sawp(int *a,int *b);
 void bubble_sort(int a[], int length);
 void print_array(int array[], int length);
 
+void test_other();
+
 int main(){
 
     int a[]= {1,5,2,3,4};
@@ -26,6 +28,8 @@ int main(){
 
     printf("After ...\n");
     print_array(a,length);
+
+    test_other();
 
     return 0;
 }
@@ -48,4 +52,15 @@ void bubble_sort(int a[], int length){
 void print_array(int array[], int length){
     for(int i=0; i<length; i++)
         printf("%d%c",array[i],(i==length-1)? '\n' :' ');
+}
+
+void test_other(){
+    int a[]= {0,1,2,3,4,5,6,7,8,9,10};
+    int length = sizeof(a)/sizeof(a[0]);
+    // printf("%d\n",length);
+    for (int  i = 0; i < length; i++)
+    {
+        print_array(a,length-1-i);
+    }
+    
 }
