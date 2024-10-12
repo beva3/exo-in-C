@@ -12,8 +12,8 @@ void test_other();
 
 int main(){
 
-    int a[]= {1,5,2,3,4};
-    int length = 5;
+    int a[]= {1,5,2,3,4,34,56,-7,33};
+    int length = sizeof(a)/sizeof(a[0]);
 
     print_array(a,length);
 
@@ -29,7 +29,7 @@ int main(){
     printf("After ...\n");
     print_array(a,length);
 
-    test_other();
+    // test_other();
 
     return 0;
 }
