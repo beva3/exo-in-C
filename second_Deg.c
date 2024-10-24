@@ -17,13 +17,21 @@ int main(){
 void solve_second_deg(){
     printf("Solving second deg, form :\n\
     ax^2 + bx + c = 0\n");
-    double coeef[] = {1,2,1};
-    print_coeff(coeef);
-    print_slts(solve(coeef));
+    // double coeffs[] = {1.,0.,2.};       //Segmentation fault (core dumped)
+    double coeffs[] = {1.,2.,1.};      
+    print_coeff(coeffs);
+    double *slts = solve(coeffs);
+    if(slts != NULL)
+        print_slts(slts);
+}
+
+double discriminant(double *coeef){
+    return coeef[1] * coeef[1] - 4 * coeef[0] * coeef[2];
 }
 
 double *solve(double *coeffs){
     double *slts = NULL;
+    double delta = 0;
     slts = (double *)malloc(3*sizeof(double));
     if(slts ==NULL){
         printf("Allocation error : ...\n");
@@ -33,11 +41,47 @@ double *solve(double *coeffs){
 
     printf("Start solve ...\n");
     // traitemets
-
+    delta = discriminant(coeffs);
+    
     // slts
-    slts[0] = 0,slts[1] = 0;
+    // if(delta > 0 || delta == 0){
+    /**
+     * Solving second deg, form :
+     * ax^2 + bx + c = 0
+     * coeffs : ...
+     * c_0 = 1
+     * c_1 = 2
+     * c_2 = 1
+     * Start solve ...
+     * delta = 0.000000
+     * we have 2 slts : x_0 and x_1 ...
+     * Solution : ...
+     * x_0 = -0.5
+     * x_1 = -0.5
+     */
 
-    return slts;
+    // if(delta >= 1e-10)
+    /**
+     * Solving second deg, form :
+     * ax^2 + bx + c = 0
+     * coeffs : ...
+     * c_0 = 1
+     * c_1 = 2
+     * c_2 = 1
+     * Start solve ...
+     * No slts ...
+     */
+    if(delta > 1e-10 || delta == 0){
+        printf("delta = %f\n",delta);
+        printf("we have 2 slts : x_0 and x_1 ...\n");
+        slts[0] = (-coeffs[2] - sqrt(delta))/(2*coeffs[0]);
+        slts[1] = (-coeffs[2] + sqrt(delta))/(2*coeffs[0]);
+        return slts;
+    }
+    else{  
+        printf("No slts ...\n");
+        return NULL;
+    }
     free(slts);
 }
 
