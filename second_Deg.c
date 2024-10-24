@@ -18,11 +18,29 @@ void solve_second_deg(){
     printf("Solving second deg, form :\n\
     ax^2 + bx + c = 0\n");
     // double coeffs[] = {1.,0.,2.};       //Segmentation fault (core dumped)
-    double coeffs[] = {1.,2.,1.};      
-    print_coeff(coeffs);
-    double *slts = solve(coeffs);
-    if(slts != NULL)
-        print_slts(slts);
+    double coeffs[] = {1.,2.,1.};
+    double test_coeff[][3] = {
+        {1,2,1},
+        {3,4,-1},
+        {2,0,-3},
+        {3,3,-2},
+        {4,16,16}
+    };      
+    int n_test = sizeof(test_coeff)/sizeof(test_coeff[0]);
+    // printf("%d\n",n_test);
+    // print_coeff(coeffs);
+    // double *slts = solve(coeffs);
+    // if(slts != NULL)
+    //     print_slts(slts);
+
+    for (int i = 0; i < n_test; i++)
+    {
+        print_coeff(test_coeff[i]);
+        printf("test %d\n",i);
+        double *slts = solve(test_coeff[i]);
+        if(slts != NULL)
+            print_slts(slts);
+    }
 }
 
 double discriminant(double *coeef){
@@ -33,6 +51,7 @@ double *solve(double *coeffs){
     double *slts = NULL;
     double delta = 0;
     slts = (double *)malloc(3*sizeof(double));
+
     if(slts ==NULL){
         printf("Allocation error : ...\n");
         free(slts);
@@ -41,6 +60,7 @@ double *solve(double *coeffs){
 
     printf("Start solve ...\n");
     // traitemets
+
     delta = discriminant(coeffs);
     
     // slts
