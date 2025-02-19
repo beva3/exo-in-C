@@ -13,7 +13,9 @@ int main()
 }
 int binary_search(int a[], int el, int l, int r)
 {
+
     int mid = l + (r - l) / 2;
+    if (l > r) return -1;
     if (a[mid] == el)
         return mid;
     else if (a[mid] > el)
