@@ -5,10 +5,12 @@ int count_word(char *word);
 
 int main()
 {
-    char *word = "hello     you je suis";
+    char *word = "hello   you je suis";
     int count = count_word(word);
     printf("count world %d\n", count);
     // printf("%s\n", strchr("qwerty",'e'));
+
+    // printf("%s\n", strchr(" ,.",' '));
 
     return 0;
 }
@@ -40,6 +42,7 @@ int count_word(char *word)
             i++;
             
         }
+        printf("fahaviry eto ...\n");
         
         
     }
