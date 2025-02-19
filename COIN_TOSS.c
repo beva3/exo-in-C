@@ -8,7 +8,7 @@ typedef enum Coin
     HEADS,
     TAILS
 } Coin;
-Coin flipCoen();
+Coin flipCoin();
 
 int main()
 {
@@ -17,14 +17,14 @@ int main()
 
     for (int  i = 0; i < 10; i++)
     {
-       flipCoen() == HEADS ? printf("HEADS\n") : printf("TAILS\n");
+       flipCoin() == HEADS ? printf("HEADS\n") : printf("TAILS\n");
         
     }
 
     return 0;
 }
  
-Coin flipCoen()
+Coin flipCoin()
 {
     return rand() % 2 ==0 ? HEADS : TAILS;
 }
