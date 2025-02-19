@@ -14,13 +14,22 @@
 int world_acount(char *s);
 
 int main(){
-    char *str_chr = strchr("Raphael",'T');
-    printf("The result is %s\n",str_chr);
+    printf("count : %d\n",world_acount("hello world how are you"));
     return 0;
 }
 
 int world_acount(char *s){
-    int count = 0;
-
+    int count = 1;
+    while ((*s))
+    {
+        if ((*s) == ' ')
+        {
+            count ++;
+        }
+        *s++;
+        
+        
+    }
+    
     return count;
 }
