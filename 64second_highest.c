@@ -97,8 +97,7 @@ VP min_tab(int a[], int length){
         {
             min.v = a[i];
             min.p = i;
-        }
-        
+        }        
     }
     // printf("inside the function : min = %d\n", min.v);
     return min;
