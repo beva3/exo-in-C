@@ -6,12 +6,11 @@ typedef struct VP{
 }VP;
 void display_vp(VP vp);
 VP min_tab(int a[], int length);
-int second_highest(int a[], int length);
-void swap(int *t, VP *vp);
-void display_tab(int *t, int lenght);
-
 void sort(int a[], int len);
+void swap(int *t, VP *vp);
 
+int second_highest(int a[], int length);
+void display_tab(int *t, int lenght);
 
 int main()
 {
@@ -35,6 +34,7 @@ int main()
 
     return 0;
 }
+
 void display_tab(int *t, int lenght){
     for (int  i = 0; i < lenght; i++)
     {
@@ -42,6 +42,12 @@ void display_tab(int *t, int lenght){
     }
     
 }
+
+void display_vp(VP vp){
+    printf("value       = %d\n", vp.v);
+    printf("position    = %d\n", vp.p);
+}
+
 int second_highest(int a[], int length)
 {
     int max2 = 0;
@@ -101,9 +107,4 @@ VP min_tab(int a[], int length){
     }
     // printf("inside the function : min = %d\n", min.v);
     return min;
-}
-
-void display_vp(VP vp){
-    printf("value       = %d\n", vp.v);
-    printf("position    = %d\n", vp.p);
 }
